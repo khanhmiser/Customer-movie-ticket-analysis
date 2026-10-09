@@ -1,0 +1,37 @@
+__pycache__/
+.ipynb_checkpoints/
+.env
+data/processed/
+# dữ liệu sinh ra bởi src/ingest.py và src/marts.py (tạo lại bằng lệnh, không commit)
+data/incoming/
+data/warehouse/
+data/quarantine/
+data/_demo/
+data/marts/*
+!data/marts/data_dictionary.md
+!data/marts/data_dictionary.csv
+reports/data_quality/
+reports/daily/
+# danh sách email thật của các phòng ban (sao chép từ config/recipients.example.json)
+config/recipients.json
+# email xem trước khi chưa cấu hình SMTP
+reports/weekly/*/outbox/
+reports/logs/
+data/archive/
+# ghi chú cá nhân cho Claude Code
+CLAUDE.local.md
+data/rag/
+
+# ---- bí mật: KHÔNG BAO GIỜ đưa lên GitHub (kiểm tra bằng `python scripts/check_secrets.py`)
+.env.*
+!.env.example
+.streamlit/secrets.toml
+*.pem
+*.key
+*.p12
+credentials*.json
+service_account*.json
+token*.json
+.claude/*.local.*
+.codebase-memory/
+.pytest_cache/

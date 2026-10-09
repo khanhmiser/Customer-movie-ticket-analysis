@@ -1,0 +1,260 @@
+{
+  "week_start": "2022-12-19",
+  "alerts": [],
+  "recovery_list_size": 166,
+  "brief_sources": {
+    "marketing": "template (\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\")",
+    "customer_care": "template (\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\")",
+    "product_it": "template (\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\")",
+    "finance": "template (\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\")",
+    "leadership": "template (\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\")"
+  },
+  "excel_report": "weekly_report_2022-12-19.xlsx",
+  "data_source": "warehouse",
+  "deliveries": [
+    {
+      "department": "marketing",
+      "to": [
+        "marketing@example.com"
+      ],
+      "status": "saved_to_outbox"
+    },
+    {
+      "department": "customer_care",
+      "to": [
+        "customer_care@example.com"
+      ],
+      "status": "saved_to_outbox"
+    },
+    {
+      "department": "product_it",
+      "to": [
+        "product_it@example.com"
+      ],
+      "status": "saved_to_outbox"
+    },
+    {
+      "department": "finance",
+      "to": [
+        "finance@example.com"
+      ],
+      "status": "saved_to_outbox"
+    },
+    {
+      "department": "leadership",
+      "to": [
+        "leadership@example.com"
+      ],
+      "status": "saved_to_outbox"
+    }
+  ],
+  "facts": {
+    "week_start": "2022-12-19",
+    "week_end": "2022-12-25",
+    "tickets": "2,836",
+    "success_rate": "93.3%",
+    "success_rate_prev_8_weeks": "91.4%",
+    "failed_tickets": "189",
+    "failed_ticket_value": "1,911",
+    "top_error": "Payment failed from bank",
+    "top_error_count": "161",
+    "new_customers": "2,020",
+    "new_customers_failed_first_payment": "145",
+    "new_customers_lost_at_payment": "129",
+    "promotion_share_of_success": "44.2%",
+    "discount_spend": "1,873",
+    "worst_payment_method": "debit card",
+    "worst_payment_method_failure_rate": "27.7%",
+    "best_payment_method": "money in app",
+    "best_payment_method_failure_rate": "1.2%",
+    "error_groups": {
+      "customer": {
+        "rate": "0.9%",
+        "baseline_rate": "1.7%",
+        "z_score": "-1.8",
+        "alert": false,
+        "excess_errors": "0"
+      },
+      "external": {
+        "rate": "5.7%",
+        "baseline_rate": "6.9%",
+        "z_score": "-1.5",
+        "alert": false,
+        "excess_errors": "0"
+      },
+      "internal": {
+        "rate": "0.1%",
+        "baseline_rate": "0.0%",
+        "z_score": "0.4",
+        "alert": false,
+        "excess_errors": "3"
+      }
+    },
+    "definitions": {
+      "recovery_window": "mua lại thành công trong 7 ngày sau giao dịch lỗi",
+      "retention_window": "giữ chân = mua lần 2 trong 30 ngày",
+      "repeat_window": "quay lại / chỉ mua 1 lần = có / không mua thêm trong 90 ngày",
+      "baseline_window": "mức nền = trung vị 8 tuần trước"
+    },
+    "customer_care": {
+      "errors_by_code": {
+        "Payment failed from bank": "161",
+        "Need verify your account to continue": "15",
+        "Payment overdue": "10",
+        "Transaction temporarily limited": "3"
+      }
+    },
+    "product_it": {
+      "top_increases": [
+        {
+          "error": "Payment failed from bank",
+          "platform": "website",
+          "paying_method": "debit card",
+          "rate": "38.9%",
+          "baseline_rate": "31.7%",
+          "change_pp": "7.1",
+          "excess_errors": "4"
+        },
+        {
+          "error": "Payment failed from bank",
+          "platform": "mobile",
+          "paying_method": "debit card",
+          "rate": "22.6%",
+          "baseline_rate": "21.4%",
+          "change_pp": "1.2",
+          "excess_errors": "2"
+        },
+        {
+          "error": "Payment overdue",
+          "platform": "mobile",
+          "paying_method": "debit card",
+          "rate": "1.7%",
+          "baseline_rate": "0.5%",
+          "change_pp": "1.2",
+          "excess_errors": "2"
+        }
+      ]
+    },
+    "finance": {
+      "unrecovered_month": "2022-11",
+      "failed_value": "5,083",
+      "unrecovered_failed_value": "4,791",
+      "unrecovered_share": "94.2%",
+      "one_time_discount_month": "2022-08",
+      "discount_total": "4,133",
+      "discount_one_time": "3,628",
+      "one_time_discount_share": "87.8%"
+    },
+    "marketing": {
+      "segments": {
+        "Khách lâu chưa quay lại": "80,388",
+        "Khách nhạy khuyến mãi": "9,711",
+        "Khách thường xuyên": "6,445",
+        "Khách mua một lần (mới)": "5,634",
+        "Khách giá trị cao": "2,676"
+      },
+      "segment_actions": {
+        "Khách giá trị cao": "Membership, ưu đãi đặc quyền, đặt vé sớm phim hot",
+        "Khách mua một lần (mới)": "Tặng coupon cho lần mua thứ hai trong vòng 7–14 ngày",
+        "Khách lâu chưa quay lại": "Kéo lại bằng phim mới, voucher quay lại, thông báo cá nhân hóa",
+        "Khách nhạy khuyến mãi": "Chuyển từ giảm giá trực tiếp sang tích điểm, voucher cá nhân hóa",
+        "Khách thường xuyên": "Duy trì, không cần giảm giá sâu"
+      },
+      "score_source": "model",
+      "campaign_types": {
+        "reward point": {
+          "one_time_rate": "95.7%",
+          "discount_per_returned": "127"
+        },
+        "direct discount": {
+          "one_time_rate": "91.7%",
+          "discount_per_returned": "36"
+        },
+        "none": {
+          "one_time_rate": "90.4%",
+          "discount_per_returned": "2"
+        },
+        "voucher": {
+          "one_time_rate": "88.5%",
+          "discount_per_returned": "12"
+        }
+      },
+      "worst_campaign_type": "reward point",
+      "best_campaign_type": "voucher",
+      "campaign_ids_one_time_95pct": "3"
+    },
+    "leadership": {
+      "kpi_month": "2022-11",
+      "kpis": {
+        "1. Tăng số giao dịch thành công": {
+          "Vé đặt thành công": {
+            "value": "7,571",
+            "previous_month": "8,923"
+          },
+          "Tỷ lệ chuyển đổi (khách)": {
+            "value": "92.0%",
+            "previous_month": "91.7%"
+          },
+          "Doanh thu": {
+            "value": "53,610",
+            "previous_month": "64,597"
+          }
+        },
+        "2. Tăng tỷ lệ khách quay lại": {
+          "Khách mới mua lần 2 trong 90 ngày": {
+            "value": "n/a",
+            "previous_month": "n/a"
+          },
+          "Giữ chân sau 30 ngày": {
+            "value": "n/a",
+            "previous_month": "3.1%"
+          }
+        },
+        "3. Giảm phụ thuộc khuyến mãi": {
+          "Mua lại không dùng khuyến mãi": {
+            "value": "43.2%",
+            "previous_month": "64.5%"
+          },
+          "Chi phí giảm giá / 1 khách KM quay lại": {
+            "value": "n/a",
+            "previous_month": "n/a"
+          }
+        },
+        "4. Cải thiện thanh toán": {
+          "Tỷ lệ thanh toán thành công": {
+            "value": "91.4%",
+            "previous_month": "91.0%"
+          },
+          "Tỷ lệ lỗi thanh toán": {
+            "value": "8.6%",
+            "previous_month": "9.0%"
+          }
+        },
+        "5. Tối ưu mobile": {
+          "Tỷ lệ chuyển đổi trên mobile": {
+            "value": "92.1%",
+            "previous_month": "91.8%"
+          },
+          "Tỷ lệ hoàn tất thanh toán trên app": {
+            "value": "91.4%",
+            "previous_month": "91.1%"
+          }
+        },
+        "6. Nâng cao giá trị khách hàng": {
+          "Tần suất mua (vé / khách)": {
+            "value": "1.03",
+            "previous_month": "1.03"
+          },
+          "Chi tiêu TB / khách": {
+            "value": "7.29",
+            "previous_month": "7.47"
+          },
+          "Giá trị tích lũy TB / khách": {
+            "value": "9.57",
+            "previous_month": "9.56"
+          }
+        }
+      }
+    }
+  }
+}

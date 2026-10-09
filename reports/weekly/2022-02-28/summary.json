@@ -1,0 +1,234 @@
+{
+  "week_start": "2022-02-28",
+  "alerts": [
+    {
+      "error_group": "external",
+      "rate": 0.1776,
+      "baseline": 0.0867,
+      "z": 5.0248
+    }
+  ],
+  "recovery_list_size": 175,
+  "brief_sources": {
+    "marketing": "template (LLM_MODE=off)",
+    "customer_care": "template (LLM_MODE=off)",
+    "product_it": "template (LLM_MODE=off)",
+    "finance": "template (LLM_MODE=off)",
+    "leadership": "template (LLM_MODE=off)"
+  },
+  "excel_report": "weekly_report_2022-02-28.xlsx",
+  "latest_report": "D:\\job\\project movie ticket\\reports\\BAO_CAO_MOI_NHAT.xlsx",
+  "data_source": "csv",
+  "deliveries": [],
+  "facts": {
+    "week_start": "2022-02-28",
+    "week_end": "2022-03-06",
+    "tickets": "1,019",
+    "success_rate": "80.8%",
+    "success_rate_prev_8_weeks": "82.4%",
+    "failed_tickets": "196",
+    "failed_ticket_value": "1,696",
+    "top_error": "Payment failed from bank",
+    "top_error_count": "180",
+    "new_customers": "813",
+    "new_customers_failed_first_payment": "157",
+    "new_customers_lost_at_payment": "148",
+    "promotion_share_of_success": "74.0%",
+    "discount_spend": "2,215",
+    "worst_payment_method": "debit card",
+    "worst_payment_method_failure_rate": "36.9%",
+    "best_payment_method": "money in app",
+    "best_payment_method_failure_rate": "2.3%",
+    "error_groups": {
+      "customer": {
+        "rate": "1.2%",
+        "baseline_rate": "6.8%",
+        "z_score": "-3.4",
+        "alert": false,
+        "excess_errors": "0"
+      },
+      "external": {
+        "rate": "17.8%",
+        "baseline_rate": "8.7%",
+        "z_score": "5.0",
+        "alert": true,
+        "excess_errors": "93"
+      },
+      "internal": {
+        "rate": "0.3%",
+        "baseline_rate": "0.0%",
+        "z_score": "1.0",
+        "alert": false,
+        "excess_errors": "3"
+      }
+    },
+    "definitions": {
+      "recovery_window": "mua lại thành công trong 7 ngày sau giao dịch lỗi",
+      "retention_window": "giữ chân = mua lần 2 trong 30 ngày",
+      "repeat_window": "quay lại / chỉ mua 1 lần = có / không mua thêm trong 90 ngày",
+      "baseline_window": "mức nền = trung vị 8 tuần trước"
+    },
+    "customer_care": {
+      "errors_by_code": {
+        "Payment failed from bank": "180",
+        "Need verify your account to continue": "7",
+        "Transaction temporarily limited": "3",
+        "Payment overdue": "3",
+        "Insufficient funds in customer account. Please add more funds and try the transaction again.": "2",
+        "No response from your bank": "1"
+      }
+    },
+    "product_it": {
+      "top_increases": [
+        {
+          "error": "Payment failed from bank",
+          "platform": "mobile",
+          "paying_method": "bank account",
+          "rate": "21.1%",
+          "baseline_rate": "4.6%",
+          "change_pp": "16.5",
+          "excess_errors": "74"
+        },
+        {
+          "error": "Payment failed from bank",
+          "platform": "mobile",
+          "paying_method": "debit card",
+          "rate": "36.5%",
+          "baseline_rate": "19.6%",
+          "change_pp": "16.9",
+          "excess_errors": "26"
+        },
+        {
+          "error": "Payment failed from bank",
+          "platform": "mobile",
+          "paying_method": "credit card",
+          "rate": "24.5%",
+          "baseline_rate": "21.5%",
+          "change_pp": "2.9",
+          "excess_errors": "3"
+        }
+      ]
+    },
+    "finance": {
+      "unrecovered_month": "2022-01",
+      "failed_value": "660",
+      "unrecovered_failed_value": "594",
+      "unrecovered_share": "90.0%",
+      "one_time_discount_month": "2021-11",
+      "discount_total": "90",
+      "discount_one_time": "71",
+      "one_time_discount_share": "79.2%"
+    },
+    "marketing": {
+      "segments": {
+        "Khách lâu chưa quay lại": "37,940",
+        "Khách mua một lần (mới)": "3,145",
+        "Khách nhạy khuyến mãi": "1,425",
+        "Khách thường xuyên": "557",
+        "Khách giá trị cao": "333"
+      },
+      "segment_actions": {
+        "Khách giá trị cao": "Membership, ưu đãi đặc quyền, đặt vé sớm phim hot",
+        "Khách mua một lần (mới)": "Tặng coupon cho lần mua thứ hai trong vòng 7–14 ngày",
+        "Khách lâu chưa quay lại": "Kéo lại bằng phim mới, voucher quay lại, thông báo cá nhân hóa",
+        "Khách nhạy khuyến mãi": "Chuyển từ giảm giá trực tiếp sang tích điểm, voucher cá nhân hóa",
+        "Khách thường xuyên": "Duy trì, không cần giảm giá sâu"
+      },
+      "score_source": "model",
+      "campaign_types": {
+        "reward point": {
+          "one_time_rate": "95.7%",
+          "discount_per_returned": "127"
+        },
+        "direct discount": {
+          "one_time_rate": "91.7%",
+          "discount_per_returned": "38"
+        },
+        "none": {
+          "one_time_rate": "89.7%",
+          "discount_per_returned": "0"
+        },
+        "voucher": {
+          "one_time_rate": "88.9%",
+          "discount_per_returned": "12"
+        }
+      },
+      "worst_campaign_type": "reward point",
+      "best_campaign_type": "voucher",
+      "campaign_ids_one_time_95pct": "3"
+    },
+    "leadership": {
+      "kpi_month": "2022-02",
+      "kpis": {
+        "1. Tăng số giao dịch thành công": {
+          "Vé đặt thành công": {
+            "value": "3,463",
+            "previous_month": "479"
+          },
+          "Tỷ lệ chuyển đổi (khách)": {
+            "value": "83.9%",
+            "previous_month": "87.3%"
+          },
+          "Doanh thu": {
+            "value": "27,702",
+            "previous_month": "3,988"
+          }
+        },
+        "2. Tăng tỷ lệ khách quay lại": {
+          "Khách mới mua lần 2 trong 90 ngày": {
+            "value": "n/a",
+            "previous_month": "n/a"
+          },
+          "Giữ chân sau 30 ngày": {
+            "value": "n/a",
+            "previous_month": "4.5%"
+          }
+        },
+        "3. Giảm phụ thuộc khuyến mãi": {
+          "Mua lại không dùng khuyến mãi": {
+            "value": "47.3%",
+            "previous_month": "46.7%"
+          },
+          "Chi phí giảm giá / 1 khách KM quay lại": {
+            "value": "n/a",
+            "previous_month": "n/a"
+          }
+        },
+        "4. Cải thiện thanh toán": {
+          "Tỷ lệ thanh toán thành công": {
+            "value": "82.3%",
+            "previous_month": "84.9%"
+          },
+          "Tỷ lệ lỗi thanh toán": {
+            "value": "17.7%",
+            "previous_month": "15.1%"
+          }
+        },
+        "5. Tối ưu mobile": {
+          "Tỷ lệ chuyển đổi trên mobile": {
+            "value": "83.8%",
+            "previous_month": "86.9%"
+          },
+          "Tỷ lệ hoàn tất thanh toán trên app": {
+            "value": "82.3%",
+            "previous_month": "84.6%"
+          }
+        },
+        "6. Nâng cao giá trị khách hàng": {
+          "Tần suất mua (vé / khách)": {
+            "value": "1.07",
+            "previous_month": "1.01"
+          },
+          "Chi tiêu TB / khách": {
+            "value": "8.54",
+            "previous_month": "8.41"
+          },
+          "Giá trị tích lũy TB / khách": {
+            "value": "9.61",
+            "previous_month": "9.59"
+          }
+        }
+      }
+    }
+  }
+}
