@@ -7,6 +7,8 @@ The project now covers the full loop: **find the problem → measure it → buil
 
 ---
 
+**Live demo:** [Booking Health Monitor on Streamlit Cloud](https://customer-movie-ticket-analysis-xyhw8mdxv5ngiour6kngde.streamlit.app/) *(runs on the 2019–2022 dataset; the first load after a period of inactivity can take a minute)*
+
 **Docs:** [Department guide](docs/huong_dan_phong_ban.md) · [Operations runbook](docs/runbook.md) · [Data workflow & metric definitions](docs/data_workflow.md) · [How AI was used](docs/ai_usage_log.md) · [Changelog](CHANGELOG.md) *(docs in Vietnamese, for the operating team)*
 
 ## 1. The business problem
